@@ -1,0 +1,105 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-06T01:42:44.817Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11926768500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Preencher Formulario FAP",
+        "description": "",
+        "id": "tela-fap;preencher-formulario-fap;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2321248700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1970891900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "que estou na tela de FAP",
+            "match": {
+              "location": "steps.FAPSteps.que_estou_na_tela_de_fap()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 50040900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "direciono para o formulario",
+            "match": {
+              "location": "steps.FAPSteps.direciono_para_o_formulario()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1074623400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "preencho as informacoes \u0027soc\u0027, \u00278\u0027, \u00272\u0027 e \u002750000\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027soc\u0027",
+                  "offset": 24
+                },
+                {
+                  "val": "\u00278\u0027",
+                  "offset": 31
+                },
+                {
+                  "val": "\u00272\u0027",
+                  "offset": 36
+                },
+                {
+                  "val": "\u002750000\u0027",
+                  "offset": 42
+                }
+              ],
+              "location": "steps.FAPSteps.preencho_as_informacoes_e(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FormFAP"
+          }
+        ]
+      }
+    ],
+    "name": "Tela FAP",
+    "description": "",
+    "id": "tela-fap",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/java/features/FAP.feature",
+    "tags": []
+  }
+]
