@@ -1,7 +1,7 @@
 #language: pt
   Funcionalidade: Tela FAP
 
-    @FormFAP
+    @CTFormFAP
     Esquema do Cenario: Preencher Formulario FAP
       Dado que estou na tela de FAP
       Quando direciono para o formulario

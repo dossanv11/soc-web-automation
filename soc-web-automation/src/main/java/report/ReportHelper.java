@@ -1,4 +1,4 @@
-package utils;
+package report;
 
 import com.aventstack.extentreports.Status;
 import factory.DriverFactory;
@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Helper {
+public class ReportHelper {
     public static CustomExtentReporter customReport;
     private static int contadorScreenShot = 0;
 
@@ -22,7 +22,7 @@ public class Helper {
     public static void salvarScreenshot(Scenario scenario) throws IOException {
         contadorScreenShot++;
         ArrayList<String> listaTagName = (ArrayList<String>) scenario.getSourceTagNames();
-        String screenShotFileName = System.getProperty("user.dir") + "/target/report/screenshots/print" + contadorScreenShot + ".png";
+        String screenShotFileName = System.getProperty("user.dir") + "/" + ReportHelper.urlBaseDiretorio(scenario) + "/screenshots/" + scenario.getName() + "/print" + contadorScreenShot + ".png";
         screenshot(screenShotFileName);
         customReport.insereScreenShot(screenShotFileName);
     }
@@ -34,5 +34,9 @@ public class Helper {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static String urlBaseDiretorio(Scenario scenario) {
+        return "target/report/" + scenario.getName();
     }
 }

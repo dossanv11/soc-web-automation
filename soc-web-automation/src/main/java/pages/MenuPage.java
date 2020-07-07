@@ -4,7 +4,7 @@ import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Helper;
+import report.ReportHelper;
 
 public class MenuPage extends BasePage{
 
@@ -19,7 +19,7 @@ public class MenuPage extends BasePage{
     private WebElement sbFAP;
 
     public void acessarPaginaFap() {
-        Helper.inserirLog(Status.INFO, "Acessando a página FAP...");
+        ReportHelper.inserirLog(Status.INFO, "Acessando a página FAP...");
         moverParaElemento(mnRecursos);
         clicarNoElemento(sbFAP);
     }

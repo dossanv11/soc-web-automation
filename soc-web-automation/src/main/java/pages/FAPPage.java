@@ -4,7 +4,7 @@ import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Helper;
+import report.ReportHelper;
 
 import java.util.List;
 
@@ -47,17 +47,17 @@ public class FAPPage extends BasePage{
     }
 
     public void preencherNomeEmpresa(String texto) {
-        Helper.inserirLog(Status.INFO, "Preenchendo o campo nome da empresa com o valor: " + texto);
+        ReportHelper.inserirLog(Status.INFO, "Preenchendo o campo nome da empresa com o valor: " + texto);
         inserirTextoNoElemento(txtNomeEmpresa, texto);
     }
 
     public void preencherFap(String texto) {
-        Helper.inserirLog(Status.INFO, "Preenchendo o campo FAP com o valor: " + texto);
+        ReportHelper.inserirLog(Status.INFO, "Preenchendo o campo FAP com o valor: " + texto);
         inserirTextoNoElemento(txtFap, texto);
     }
 
     public void escolherRat(String texto) throws InterruptedException {
-        Helper.inserirLog(Status.INFO, "Selecionando o valor: " + texto);
+        ReportHelper.inserirLog(Status.INFO, "Selecionando o valor: " + texto);
         WebElement itemSelecionado = null;
         clicarNoElemento(selectRat);
         Thread.sleep(50);
@@ -72,7 +72,7 @@ public class FAPPage extends BasePage{
     }
 
     public void preencherProjecaoMassaSalarial(String texto) {
-        Helper.inserirLog(Status.INFO, "Preenchendo o campo de projeção de massa salarial com o valor: " + texto);
+        ReportHelper.inserirLog(Status.INFO, "Preenchendo o campo de projeção de massa salarial com o valor: " + texto);
         inserirTextoNoElemento(txtProjecao, texto);
     }
 

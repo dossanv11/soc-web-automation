@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         features="src/test/java/features",
         glue="steps",
         monochrome = true,
-        plugin = {"pretty", "html:target/cucumber-reports/report.html", "json:target/cucumber-json-report.json"},
-        tags="@FormFAP")
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        plugin = {"pretty"},
+        tags= "@CTFormFAP"
+        )
 public class TestRunner{}
-
-// "html:target/cucumber-reports/report.html", "json:target/cucumber-json-report.json"

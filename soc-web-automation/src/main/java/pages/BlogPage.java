@@ -4,9 +4,8 @@ import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
-import utils.Helper;
+import report.ReportHelper;
 
 import java.util.List;
 
@@ -34,17 +33,17 @@ public class BlogPage extends BasePage {
     }
     
     public void inserirTextoParaBusca(String texto) {
-        Helper.inserirLog(Status.INFO, "Preenchendo campo de busca com o valor: " + texto);
+        ReportHelper.inserirLog(Status.INFO, "Preenchendo campo de busca com o valor: " + texto);
         inserirTextoNoElemento(fdBuscar, texto);
     }
     
     public void realizarBusca() {
-    	Helper.inserirLog(Status.INFO, "Realizando busca...");
+    	ReportHelper.inserirLog(Status.INFO, "Realizando busca...");
         clicarNoElemento(btnBuscar);
     }
 
     public boolean obterResultadoSatisfatorio(String texto) {
-        Helper.inserirLog(Status.INFO, "Verificando retorno da busca...");
+        ReportHelper.inserirLog(Status.INFO, "Verificando retorno da busca...");
         boolean resultadoEncontrado = false;
         for (WebElement resultado :
                 ltResultados) {
